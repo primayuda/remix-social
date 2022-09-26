@@ -16,13 +16,13 @@ export default function Index() {
   const { posts } = useLoaderData<LoaderData>();
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      <h1>Welcome to Remix</h1>
+      <h1 className="text-3xl text-blue-500 font-bold">Welcome to Remix</h1>
       <ul>
         {posts.map(post => (
           <li key={post.title}>
             <div>
-              <h2>{post.title}</h2>
-              <p>{post.body}</p>
+              <h2 className="text-2xl mb-1 ml-2 font-semibold">{post.title}</h2>
+              <p className="text-xl mb-3 px-3">{post.body}</p>
             </div>
           </li>
         ))}
